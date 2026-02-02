@@ -13,6 +13,9 @@
 # Autorouter files (exported from Pcbnew)
 .dsn
 
+# KiCad footprint info cache (any depth)
+fp-info-cache
+
 Pi1551-III Module/export/
 Pi1551-III Module Panel/export/
 faceplates/C64 Pi1551-III Module FB1/export/

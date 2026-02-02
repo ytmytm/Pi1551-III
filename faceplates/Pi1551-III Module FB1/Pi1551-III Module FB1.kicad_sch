@@ -1,0 +1,469 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "b476d104-15be-4d17-a84b-2679d5fa2756")
+	(paper "A4")
+	(title_block
+		(title "Pi1551-III Faceplate (FB1)")
+		(date "2026-02-02")
+		(rev "1")
+		(comment 4 "This is a clean version of the top faceplate.")
+	)
+	(lib_symbols
+		(symbol "Connector:Conn_01x01_Female"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Connector_Conn_01x01_Female"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x01_Female_1_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -0.508)
+					(mid -0.508 0)
+					(end 0 0.508)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 280.035 20.955)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "09f67564-1158-4327-be44-71b6c89d0a04")
+	)
+	(junction
+		(at 276.86 20.955)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19b26b83-1581-4276-ba1c-84dedc0caae1")
+	)
+	(wire
+		(pts
+			(xy 280.035 19.05) (xy 280.035 20.955)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2194dfd7-b67c-4f4c-871f-a92124fca885")
+	)
+	(wire
+		(pts
+			(xy 273.685 19.05) (xy 273.685 20.955)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42a76a01-990e-4008-a73e-dcdc9763c000")
+	)
+	(wire
+		(pts
+			(xy 283.21 20.955) (xy 283.21 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54d5310f-8e6c-4c35-8c92-4c9ca4a8e68d")
+	)
+	(wire
+		(pts
+			(xy 276.86 19.05) (xy 276.86 20.955)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dc18e98-970f-4af6-bf2c-889455f5f103")
+	)
+	(wire
+		(pts
+			(xy 276.86 20.955) (xy 280.035 20.955)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b049c4e4-463e-4e03-bbfd-609710d7ed9d")
+	)
+	(wire
+		(pts
+			(xy 280.035 20.955) (xy 283.21 20.955)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d11332b6-ad2e-4d9f-8480-35392738dac4")
+	)
+	(wire
+		(pts
+			(xy 273.685 20.955) (xy 276.86 20.955)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f079b8e5-c530-45e0-b4d0-be4142f8bf97")
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Female")
+		(at 273.685 13.97 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005e3b603d")
+		(property "Reference" "M1"
+			(at 271.145 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Mounting"
+			(at 275.59 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "mounting:M3_pin"
+			(at 273.685 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.685 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 273.685 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3f7926e3-de56-43c7-a16f-12dfe711cdb1")
+		)
+		(instances
+			(project ""
+				(path "/b476d104-15be-4d17-a84b-2679d5fa2756"
+					(reference "M1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Female")
+		(at 280.035 13.97 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00005e3b605a")
+		(property "Reference" "M3"
+			(at 277.495 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Mounting"
+			(at 281.94 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "mounting:M3_pin"
+			(at 280.035 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 280.035 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 280.035 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38c0ea66-13d4-4e5b-a034-2a14e5102eec")
+		)
+		(instances
+			(project ""
+				(path "/b476d104-15be-4d17-a84b-2679d5fa2756"
+					(reference "M3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Female")
+		(at 276.86 13.97 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000061f083b7")
+		(property "Reference" "M2"
+			(at 274.32 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Mounting"
+			(at 278.765 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "mounting:M3_pin"
+			(at 276.86 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.86 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 276.86 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "97ff036c-0210-4498-991f-024057086b88")
+		)
+		(instances
+			(project ""
+				(path "/b476d104-15be-4d17-a84b-2679d5fa2756"
+					(reference "M2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Female")
+		(at 283.21 13.97 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000061f083b9")
+		(property "Reference" "M4"
+			(at 280.67 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Mounting"
+			(at 285.115 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "mounting:M3_pin"
+			(at 283.21 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 283.21 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 283.21 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e4aa860-fb14-4444-ac60-28ba77fc0199")
+		)
+		(instances
+			(project ""
+				(path "/b476d104-15be-4d17-a84b-2679d5fa2756"
+					(reference "M4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

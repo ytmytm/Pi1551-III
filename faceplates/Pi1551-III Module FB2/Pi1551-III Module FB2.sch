@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Pi1541-III Faceplate (FB2)"
+Title "Pi1551-III Faceplate (FB2)"
 Date ""
 Rev "A"
 Comp ""

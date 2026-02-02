@@ -4,14 +4,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "BulkyMIDI-32 Faceplate (FB2)"
+Title "Pi1551-III Faceplate (FB1)"
 Date ""
 Rev "A"
 Comp ""
-Comment1 "Features the 8bit version of the logo."
+Comment1 ""
 Comment2 ""
-Comment3 "no active components, but makes the front panels mechanically viable."
-Comment4 "This is a clean version of the faceplate, intended for use with secondary module. It has"
+Comment3 ""
+Comment4 "This is a clean version of the top faceplate."
 $EndDescr
 $Comp
 L Connector:Conn_01x01_Female M1

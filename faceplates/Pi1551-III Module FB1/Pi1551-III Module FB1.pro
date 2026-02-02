@@ -22,7 +22,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=C64 Pi1541-III Module FB1.net
+LastNetListRead=Pi1551-III Module FB1.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0

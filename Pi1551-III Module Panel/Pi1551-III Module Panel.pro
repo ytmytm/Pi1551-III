@@ -1,18 +1,21 @@
-update=23.03.2023 01:31:57
+update=09.03.2023 02:32:14
 version=1
 last_client=kicad
+[general]
+version=1
+RootSch=
+BoardNm=
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
+[eeschema/libraries]
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=C64 Pi1541-III Module FB1.net
+LastNetListRead=Pi1551-III Module Panel.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -26,15 +29,12 @@ MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.25
-TrackWidth2=0.381
-ViaDiameter1=0.6
+ViaDiameter1=0.8
 ViaDrill1=0.4
-ViaDiameter2=1
-ViaDrill2=0.4
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
-SilkLineWidth=0.15
+SilkLineWidth=0.12
 SilkTextSizeV=1
 SilkTextSizeH=1
 SilkTextSizeThickness=0.15
@@ -46,7 +46,7 @@ CopperTextSizeH=1.5
 CopperTextThickness=0.3
 CopperTextItalic=0
 CopperTextUpright=1
-EdgeCutLineWidth=0.15
+EdgeCutLineWidth=0.05
 CourtyardLineWidth=0.05
 OthersLineWidth=0.15
 OthersTextSizeV=1
@@ -229,7 +229,7 @@ Enabled=0
 Name=Default
 Clearance=0.2
 TrackWidth=0.25
-ViaDiameter=0.6
+ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3
 uViaDrill=0.1
@@ -237,10 +237,10 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
-Name=Power
-Clearance=0.381
+Name=PWR
+Clearance=0.2
 TrackWidth=0.381
-ViaDiameter=1
+ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3
 uViaDrill=0.1
@@ -250,10 +250,10 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=../../documentation/schematic/faceplates/
+PlotDirectoryName=../documentation/schematic/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
-LabSize=60
+LabSize=50
 ERC_TestSimilarLabels=1

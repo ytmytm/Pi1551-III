@@ -1,21 +1,18 @@
-update=09.03.2023 02:33:58
+update=23.03.2023 01:31:57
 version=1
 last_client=kicad
-[general]
-version=1
-RootSch=
-BoardNm=
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=C64 Pi1541-III Module.net
+LastNetListRead=Pi1551-III Module FB1.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -241,7 +238,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=Power
-Clearance=0.2
+Clearance=0.381
 TrackWidth=0.381
 ViaDiameter=1
 ViaDrill=0.4
@@ -253,10 +250,10 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=../documentation/schematic/
+PlotDirectoryName=../../documentation/schematic/faceplates/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
 SpiceAjustPassiveValues=0
-LabSize=50
+LabSize=60
 ERC_TestSimilarLabels=1

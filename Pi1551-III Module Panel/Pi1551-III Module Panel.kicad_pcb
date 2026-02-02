@@ -802,7 +802,7 @@
   (gr_text JLCJLCJLCJLC (at 189.985 122.849 270) (layer B.SilkS) (tstamp 62C8ED1D)
     (effects (font (size 0.8 0.8) (thickness 0.1)) (justify mirror))
   )
-  (gr_text "BulkyMIDI-32\nPi1541-III Panel (rev. A)\ngithub.com/tebl" (at 94.1 122.849 270) (layer B.SilkS) (tstamp 6286D3C9)
+  (gr_text "BulkyMIDI-32\nPi1551-III Panel (rev. A)\ngithub.com/tebl" (at 94.1 122.849 270) (layer B.SilkS) (tstamp 6286D3C9)
     (effects (font (size 0.8 0.8) (thickness 0.1)) (justify mirror))
   )
   (gr_line (start 163.95 112.774) (end 141.09 112.774) (layer Edge.Cuts) (width 0.05) (tstamp 6282E724))

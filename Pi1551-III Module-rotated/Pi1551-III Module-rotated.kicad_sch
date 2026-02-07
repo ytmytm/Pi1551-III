@@ -5,9 +5,10 @@
 	(uuid "51d32fb8-d7b9-46d0-92bb-8d66d4a10b37")
 	(paper "A3")
 	(title_block
-		(title "PI1541-III Module")
+		(title "PI1541-III Module (rotated)")
 		(date "2026-02-02")
 		(rev "1")
+		(comment 1 "(RPi rotated to expose ports)")
 	)
 	(lib_symbols
 		(symbol "Connector:Mini-DIN-7"
@@ -4472,9 +4473,21 @@
 			(embedded_fonts no)
 		)
 	)
+	(rectangle
+		(start 240.03 34.29)
+		(end 394.97 227.33)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid e4eb790d-56e6-4f4a-a762-8c50af3e6b70)
+	)
 	(text "(image matches looking at the back of C16/+4)"
 		(exclude_from_sim no)
-		(at 204.851 98.298 0)
+		(at 207.264 98.298 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4484,7 +4497,7 @@
 	)
 	(text "C"
 		(exclude_from_sim no)
-		(at 305.943 86.106 0)
+		(at 305.054 73.533 0)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -4516,7 +4529,7 @@
 	)
 	(text "all of these TAP_xxx -> CAS_xxx and CAS_xxx -> TAP_xxx\nconverters reverse the logic levels\nall transistors are NPN:\n2n3904 / BC547 / S8050 / etc.\n\nNote: SMD transistors have different pinouts\nTHT: B on 2 and E on 1 (EBC) (2N3904)\nSMD: B on 1 and E on 2 (BEC) (MMBT3904 also sold as 2n3904)"
 		(exclude_from_sim no)
-		(at 339.979 113.03 0)
+		(at 339.09 100.457 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4527,7 +4540,7 @@
 	)
 	(text "Note:\nThis must be connected to\n5V from tape port,\nNOT 5V power from RPi!"
 		(exclude_from_sim no)
-		(at 278.511 77.724 0)
+		(at 277.622 65.151 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4538,7 +4551,7 @@
 	)
 	(text "TAPE EMULATOR"
 		(exclude_from_sim no)
-		(at 313.944 57.023 0)
+		(at 313.055 44.45 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -4548,7 +4561,7 @@
 	)
 	(text "B"
 		(exclude_from_sim no)
-		(at 303.403 90.17 0)
+		(at 302.514 77.597 0)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -4558,7 +4571,7 @@
 	)
 	(text "E"
 		(exclude_from_sim no)
-		(at 305.943 96.266 0)
+		(at 305.054 83.693 0)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -4579,7 +4592,7 @@
 	)
 	(text "JP2\n1-2: TAP_MOTOR driven by C16/116/+4\n2-3: TAP_MOTOR always enabled\n    (with 6510 CPU replacement)\n    (resistors and transistor optional)"
 		(exclude_from_sim no)
-		(at 273.431 205.867 0)
+		(at 272.542 193.294 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4590,7 +4603,7 @@
 	)
 	(text "JP1\n1-2: CAS_SENSE driven by Pi1551\n2-3: CAS_SENSE always enabled\n    (resistors and transistor optional)"
 		(exclude_from_sim no)
-		(at 318.643 74.93 0)
+		(at 317.754 62.357 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4598,17 +4611,6 @@
 			(justify left)
 		)
 		(uuid "c8477470-089e-40a0-8a33-f5f50dfb1fa9")
-	)
-	(text "TODO:\n- JLCPCB parts for R6/R7 SMD\n- all 10K resistors replace by 3.3K\n- double-check RPI pinout (compare on PCB view with PI1551-HAT)"
-		(exclude_from_sim no)
-		(at 197.231 31.623 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d5afeb72-f9f1-44cc-ad79-562e74fc91cd")
 	)
 	(junction
 		(at 69.215 121.285)
@@ -4623,7 +4625,7 @@
 		(uuid "143195ef-cdcd-435b-9a47-19f5cda63dad")
 	)
 	(junction
-		(at 308.737 86.614)
+		(at 307.848 74.041)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1d651daa-b8d6-47fb-9493-07fcc62bdcad")
@@ -4641,7 +4643,7 @@
 		(uuid "26befe33-3fea-4941-85d9-3601d1aac336")
 	)
 	(junction
-		(at 308.229 172.593)
+		(at 307.34 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d151543-5fb1-4637-b975-a887da042f28")
@@ -4677,7 +4679,7 @@
 		(uuid "67a5c620-ce18-468b-a1b3-e846f51da044")
 	)
 	(junction
-		(at 308.737 98.044)
+		(at 307.848 85.471)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "68c76bc4-c453-4c71-ade3-4a03b1e09d15")
@@ -4689,7 +4691,7 @@
 		(uuid "6916915a-d541-4d0a-b630-d9c18b6ed45a")
 	)
 	(junction
-		(at 308.229 223.393)
+		(at 307.34 210.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "712bbd6d-c8cd-4b34-ac61-aa1c56c88406")
@@ -4707,13 +4709,13 @@
 		(uuid "9834be29-6535-4f78-a569-558c9dc79021")
 	)
 	(junction
-		(at 308.229 213.233)
+		(at 307.34 200.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b3911a97-9b21-4c7d-890d-1982e5c694b2")
 	)
 	(junction
-		(at 308.229 129.413)
+		(at 307.34 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c3dbbcf6-d1c7-4054-be44-a6562a344d99")
@@ -4798,7 +4800,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 213.233) (xy 319.659 213.233)
+			(xy 307.34 200.66) (xy 318.77 200.66)
 		)
 		(stroke
 			(width 0)
@@ -4908,7 +4910,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 182.753) (xy 308.229 186.563)
+			(xy 307.34 170.18) (xy 307.34 173.99)
 		)
 		(stroke
 			(width 0)
@@ -4918,7 +4920,7 @@
 	)
 	(wire
 		(pts
-			(xy 298.069 218.313) (xy 300.609 218.313)
+			(xy 297.18 205.74) (xy 299.72 205.74)
 		)
 		(stroke
 			(width 0)
@@ -4938,7 +4940,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.737 73.914) (xy 308.737 76.454)
+			(xy 307.848 61.341) (xy 307.848 63.881)
 		)
 		(stroke
 			(width 0)
@@ -4958,7 +4960,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.737 96.774) (xy 308.737 98.044)
+			(xy 307.848 84.201) (xy 307.848 85.471)
 		)
 		(stroke
 			(width 0)
@@ -4978,7 +4980,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.737 86.614) (xy 320.167 86.614)
+			(xy 307.848 74.041) (xy 319.278 74.041)
 		)
 		(stroke
 			(width 0)
@@ -5005,6 +5007,16 @@
 			(type default)
 		)
 		(uuid "32f6e65b-302b-4141-aa5b-3e49d1344800")
+	)
+	(polyline
+		(pts
+			(xy 180.848 34.29) (xy 234.95 34.29)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "33ad0f4b-5c71-4e9a-a6d6-1c1ec9ea4e7d")
 	)
 	(wire
 		(pts
@@ -5068,7 +5080,7 @@
 	)
 	(wire
 		(pts
-			(xy 284.607 91.694) (xy 290.957 91.694)
+			(xy 283.718 79.121) (xy 290.068 79.121)
 		)
 		(stroke
 			(width 0)
@@ -5088,7 +5100,7 @@
 	)
 	(wire
 		(pts
-			(xy 330.327 86.614) (xy 330.327 98.044)
+			(xy 329.438 74.041) (xy 329.438 85.471)
 		)
 		(stroke
 			(width 0)
@@ -5118,7 +5130,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 200.533) (xy 308.229 203.073)
+			(xy 307.34 187.96) (xy 307.34 190.5)
 		)
 		(stroke
 			(width 0)
@@ -5148,7 +5160,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 139.573) (xy 308.229 143.383)
+			(xy 307.34 127) (xy 307.34 130.81)
 		)
 		(stroke
 			(width 0)
@@ -5248,7 +5260,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.737 98.044) (xy 308.737 100.584)
+			(xy 307.848 85.471) (xy 307.848 88.011)
 		)
 		(stroke
 			(width 0)
@@ -5258,7 +5270,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 129.413) (xy 319.659 129.413)
+			(xy 307.34 116.84) (xy 318.77 116.84)
 		)
 		(stroke
 			(width 0)
@@ -5286,6 +5298,16 @@
 		)
 		(uuid "5bdf0a4b-bb70-480e-91cb-f356cf563142")
 	)
+	(polyline
+		(pts
+			(xy 180.848 134.62) (xy 234.95 134.62)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "5cb69f26-55b1-489e-9419-ad2839a22a55")
+	)
 	(wire
 		(pts
 			(xy 46.99 99.06) (xy 48.895 99.06)
@@ -5298,7 +5320,7 @@
 	)
 	(wire
 		(pts
-			(xy 284.099 134.493) (xy 290.449 134.493)
+			(xy 283.21 121.92) (xy 289.56 121.92)
 		)
 		(stroke
 			(width 0)
@@ -5388,7 +5410,7 @@
 	)
 	(wire
 		(pts
-			(xy 298.069 134.493) (xy 300.609 134.493)
+			(xy 297.18 121.92) (xy 299.72 121.92)
 		)
 		(stroke
 			(width 0)
@@ -5448,7 +5470,7 @@
 	)
 	(wire
 		(pts
-			(xy 330.327 98.044) (xy 308.737 98.044)
+			(xy 329.438 85.471) (xy 307.848 85.471)
 		)
 		(stroke
 			(width 0)
@@ -5478,7 +5500,7 @@
 	)
 	(wire
 		(pts
-			(xy 298.069 177.673) (xy 300.609 177.673)
+			(xy 297.18 165.1) (xy 299.72 165.1)
 		)
 		(stroke
 			(width 0)
@@ -5498,7 +5520,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 126.873) (xy 308.229 129.413)
+			(xy 307.34 114.3) (xy 307.34 116.84)
 		)
 		(stroke
 			(width 0)
@@ -5608,7 +5630,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 223.393) (xy 308.229 227.203)
+			(xy 307.34 210.82) (xy 307.34 214.63)
 		)
 		(stroke
 			(width 0)
@@ -5638,7 +5660,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 170.053) (xy 308.229 172.593)
+			(xy 307.34 157.48) (xy 307.34 160.02)
 		)
 		(stroke
 			(width 0)
@@ -5648,7 +5670,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 223.393) (xy 319.659 223.393)
+			(xy 307.34 210.82) (xy 318.77 210.82)
 		)
 		(stroke
 			(width 0)
@@ -5705,6 +5727,16 @@
 			(type dash)
 		)
 		(uuid "ac52c415-fbb1-4ee6-91ba-da09087ff519")
+	)
+	(polyline
+		(pts
+			(xy 234.95 34.29) (xy 234.95 134.62)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "acf650e1-8c13-4861-86a7-caacd412ce7d")
 	)
 	(wire
 		(pts
@@ -5785,6 +5817,16 @@
 			(type default)
 		)
 		(uuid "bd944f4b-6e9c-4908-94d5-8035f2728732")
+	)
+	(polyline
+		(pts
+			(xy 180.848 34.29) (xy 180.848 134.62)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "bf95dca1-4d55-439d-ad97-fefed282c286")
 	)
 	(wire
 		(pts
@@ -5888,7 +5930,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 172.593) (xy 319.659 172.593)
+			(xy 307.34 160.02) (xy 318.77 160.02)
 		)
 		(stroke
 			(width 0)
@@ -5928,7 +5970,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 116.713) (xy 308.229 119.253)
+			(xy 307.34 104.14) (xy 307.34 106.68)
 		)
 		(stroke
 			(width 0)
@@ -5988,7 +6030,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 159.893) (xy 308.229 162.433)
+			(xy 307.34 147.32) (xy 307.34 149.86)
 		)
 		(stroke
 			(width 0)
@@ -6028,7 +6070,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.737 84.074) (xy 308.737 86.614)
+			(xy 307.848 71.501) (xy 307.848 74.041)
 		)
 		(stroke
 			(width 0)
@@ -6118,7 +6160,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.229 210.693) (xy 308.229 213.233)
+			(xy 307.34 198.12) (xy 307.34 200.66)
 		)
 		(stroke
 			(width 0)
@@ -6138,7 +6180,7 @@
 	)
 	(wire
 		(pts
-			(xy 284.099 177.673) (xy 290.449 177.673)
+			(xy 283.21 165.1) (xy 289.56 165.1)
 		)
 		(stroke
 			(width 0)
@@ -6148,7 +6190,7 @@
 	)
 	(wire
 		(pts
-			(xy 284.099 218.313) (xy 290.449 218.313)
+			(xy 283.21 205.74) (xy 289.56 205.74)
 		)
 		(stroke
 			(width 0)
@@ -6168,7 +6210,7 @@
 	)
 	(wire
 		(pts
-			(xy 298.577 91.694) (xy 301.117 91.694)
+			(xy 297.688 79.121) (xy 300.228 79.121)
 		)
 		(stroke
 			(width 0)
@@ -6237,7 +6279,7 @@
 		(uuid "0f28202b-7007-4bf8-8ff0-edaa6aaa2498")
 	)
 	(label "CAS_WRITE"
-		(at 284.099 177.673 180)
+		(at 283.21 165.1 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6307,7 +6349,7 @@
 		(uuid "2ab120b5-c8e7-417e-b378-5ba0dc4e2398")
 	)
 	(label "CAS_MOTOR"
-		(at 284.099 218.313 180)
+		(at 283.21 205.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6347,7 +6389,7 @@
 		(uuid "4e9f27ed-57a3-4989-8747-b03257b1e19c")
 	)
 	(label "TAP_READ"
-		(at 284.099 134.493 180)
+		(at 283.21 121.92 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6357,7 +6399,7 @@
 		(uuid "4fb6aa89-7fe9-4853-8de8-18f4c63e11eb")
 	)
 	(label "VCC_5V"
-		(at 308.229 116.713 0)
+		(at 307.34 104.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6437,7 +6479,7 @@
 		(uuid "8eeb4a25-66c5-42ff-9b78-d2ba310fc8b5")
 	)
 	(label "CAS_READ"
-		(at 319.659 129.413 0)
+		(at 318.77 116.84 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6457,7 +6499,7 @@
 		(uuid "949a5bcc-83df-4d67-9dcd-8472bbf71d1e")
 	)
 	(label "CAS_SENSE"
-		(at 325.247 82.804 0)
+		(at 324.358 70.231 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6527,7 +6569,7 @@
 		(uuid "bec4b485-7d09-42e2-8e2b-8a8aadaeab1d")
 	)
 	(label "VCC_5V"
-		(at 308.737 73.914 0)
+		(at 307.848 61.341 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6557,7 +6599,7 @@
 		(uuid "c75a1432-b9f7-411f-9bf6-baae623d6421")
 	)
 	(label "TAP_WRITE"
-		(at 319.659 172.593 0)
+		(at 318.77 160.02 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6637,7 +6679,7 @@
 		(uuid "ed8a9016-e04b-4228-a262-a8b868b53122")
 	)
 	(label "TAP_SENSE"
-		(at 284.607 91.694 180)
+		(at 283.718 79.121 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6647,7 +6689,7 @@
 		(uuid "ee46e724-9d82-4df1-944d-d08d71cb1826")
 	)
 	(label "TAP_MOTOR"
-		(at 323.469 218.313 0)
+		(at 322.58 205.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7213,7 +7255,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706597980880896"
 			(at 146.05 168.91 0)
 			(effects
 				(font
@@ -7228,6 +7270,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLCPCB Part #" "C17710"
+			(at 146.05 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/18398-0805W8F4700T5E/C17710"
+			(at 146.05 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR.Part #" "0805W8F4700T5E"
+			(at 146.05 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7280,7 +7349,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706597980880896"
 			(at 146.05 193.675 0)
 			(effects
 				(font
@@ -7295,6 +7364,33 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLCPCB Part #" "C17710"
+			(at 146.05 193.675 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/18398-0805W8F4700T5E/C17710"
+			(at 146.05 193.675 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR.Part #" "0805W8F4700T5E"
+			(at 146.05 193.675 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8621,7 +8717,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 294.259 134.493 270)
+		(at 293.37 121.92 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8630,15 +8726,15 @@
 		(fields_autoplaced yes)
 		(uuid "141db66d-d920-4be7-8515-b5671d4467a0")
 		(property "Reference" "R6"
-			(at 294.259 128.27 90)
+			(at 293.37 115.697 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10k"
-			(at 294.259 130.81 90)
+		(property "Value" "3.3K"
+			(at 293.37 118.237 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8646,7 +8742,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 294.259 132.715 90)
+			(at 293.37 120.142 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8654,8 +8750,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 294.259 134.493 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 293.37 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8664,7 +8760,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 294.259 134.493 0)
+			(at 293.37 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8672,8 +8768,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 294.259 134.493 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 293.37 121.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8681,8 +8777,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 294.259 134.493 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 293.37 121.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8690,8 +8786,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 294.259 134.493 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 293.37 121.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8716,7 +8812,7 @@
 	)
 	(symbol
 		(lib_id "Jumper:SolderJumper_3_Bridged12")
-		(at 325.247 86.614 0)
+		(at 324.358 74.041 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8725,7 +8821,7 @@
 		(dnp no)
 		(uuid "16a166b8-9498-4be1-aa81-649c864aae8d")
 		(property "Reference" "JP1"
-			(at 325.501 79.248 0)
+			(at 324.612 66.675 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8733,7 +8829,7 @@
 			)
 		)
 		(property "Value" "SolderJumper_3_Bridged12"
-			(at 325.247 90.424 0)
+			(at 324.358 77.851 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8742,7 +8838,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
-			(at 325.247 86.614 0)
+			(at 324.358 74.041 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8751,7 +8847,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 325.247 86.614 0)
+			(at 324.358 74.041 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8760,7 +8856,7 @@
 			)
 		)
 		(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
-			(at 325.247 86.614 0)
+			(at 324.358 74.041 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8898,7 +8994,7 @@
 	)
 	(symbol
 		(lib_id "Jumper:SolderJumper_3_Bridged12")
-		(at 319.659 218.313 90)
+		(at 318.77 205.74 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8907,7 +9003,7 @@
 		(dnp no)
 		(uuid "27c5d2de-894b-454e-a51c-6ab464acb205")
 		(property "Reference" "JP2"
-			(at 317.119 218.313 0)
+			(at 316.23 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8915,7 +9011,7 @@
 			)
 		)
 		(property "Value" "SolderJumper_3_Bridged12"
-			(at 315.849 218.313 0)
+			(at 314.96 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8924,7 +9020,7 @@
 			)
 		)
 		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
-			(at 319.659 218.313 0)
+			(at 318.77 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8933,7 +9029,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 319.659 218.313 0)
+			(at 318.77 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8942,7 +9038,7 @@
 			)
 		)
 		(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
-			(at 319.659 218.313 0)
+			(at 318.77 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9082,7 +9178,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "3.3K"
 			(at 147.32 109.7279 0)
 			(effects
 				(font
@@ -9100,7 +9196,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
 			(at 144.907 108.458 0)
 			(effects
 				(font
@@ -9118,7 +9214,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
+		(property "JLCPCB Part #" "C26010"
 			(at 144.907 108.458 90)
 			(effects
 				(font
@@ -9127,7 +9223,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
+		(property "MFR.Part #" "0805W8F3301T5E"
 			(at 144.907 108.458 90)
 			(effects
 				(font
@@ -9136,7 +9232,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
 			(at 144.907 108.458 90)
 			(effects
 				(font
@@ -9162,7 +9258,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:MMBT3904")
-		(at 306.197 91.694 0)
+		(at 305.308 79.121 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9171,7 +9267,7 @@
 		(fields_autoplaced yes)
 		(uuid "36539218-0eb5-4744-8d95-2df3db8d9064")
 		(property "Reference" "Q1"
-			(at 311.277 90.4239 0)
+			(at 310.388 77.8509 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9180,7 +9276,7 @@
 			)
 		)
 		(property "Value" "MMBT3904"
-			(at 311.277 92.9639 0)
+			(at 310.388 80.3909 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9189,7 +9285,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
-			(at 311.277 93.599 0)
+			(at 310.388 81.026 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9200,7 +9296,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
-			(at 306.197 91.694 0)
+			(at 305.308 79.121 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9210,7 +9306,7 @@
 			)
 		)
 		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 306.197 91.694 0)
+			(at 305.308 79.121 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9219,7 +9315,7 @@
 			)
 		)
 		(property "JLCPCB Part #" "C18536"
-			(at 306.197 91.694 0)
+			(at 305.308 79.121 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9228,7 +9324,7 @@
 			)
 		)
 		(property "MFR.Part #" "2N3904S-RTK/PS"
-			(at 306.197 91.694 0)
+			(at 305.308 79.121 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9237,7 +9333,7 @@
 			)
 		)
 		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/KECSemicon-2N3904S_RTKPS/C18536"
-			(at 306.197 91.694 0)
+			(at 305.308 79.121 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9265,7 +9361,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 308.229 206.883 0)
+		(at 307.34 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9274,7 +9370,7 @@
 		(fields_autoplaced yes)
 		(uuid "3cf279fe-c34a-42e7-9431-46455b8c21cb")
 		(property "Reference" "R11"
-			(at 311.15 205.6129 0)
+			(at 310.261 193.0399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9282,8 +9378,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 311.15 208.1529 0)
+		(property "Value" "3.3K"
+			(at 310.261 195.5799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9292,7 +9388,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 306.451 206.883 90)
+			(at 305.562 194.31 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9300,8 +9396,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 308.229 206.883 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 307.34 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9310,7 +9406,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 308.229 206.883 0)
+			(at 307.34 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9318,8 +9414,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 308.229 206.883 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 307.34 194.31 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9327,8 +9423,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 308.229 206.883 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 307.34 194.31 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9336,8 +9432,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 308.229 206.883 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 307.34 194.31 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9362,7 +9458,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 294.259 177.673 270)
+		(at 293.37 165.1 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9371,15 +9467,15 @@
 		(fields_autoplaced yes)
 		(uuid "48d7abbd-1ccc-48ea-bafe-725b7ac0f316")
 		(property "Reference" "R8"
-			(at 294.259 171.45 90)
+			(at 293.37 158.877 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10k"
-			(at 294.259 173.99 90)
+		(property "Value" "3.3K"
+			(at 293.37 161.417 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9387,7 +9483,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 294.259 175.895 90)
+			(at 293.37 163.322 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9395,8 +9491,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 294.259 177.673 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 293.37 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9405,7 +9501,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 294.259 177.673 0)
+			(at 293.37 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9413,8 +9509,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 294.259 177.673 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 293.37 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9422,8 +9518,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 294.259 177.673 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 293.37 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9431,8 +9527,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 294.259 177.673 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 293.37 165.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9532,7 +9628,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 308.737 100.584 0)
+		(at 307.848 88.011 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9541,7 +9637,7 @@
 		(fields_autoplaced yes)
 		(uuid "62dcf397-1c0f-47a8-a6eb-f5107e7da35d")
 		(property "Reference" "#PWR012"
-			(at 308.737 106.934 0)
+			(at 307.848 94.361 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9550,7 +9646,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 308.737 105.664 0)
+			(at 307.848 93.091 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9558,7 +9654,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 308.737 100.584 0)
+			(at 307.848 88.011 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9567,7 +9663,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 308.737 100.584 0)
+			(at 307.848 88.011 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9576,7 +9672,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 308.737 100.584 0)
+			(at 307.848 88.011 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9585,7 +9681,7 @@
 			)
 		)
 		(property "Field5" ""
-			(at 308.737 100.584 0)
+			(at 307.848 88.011 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9607,7 +9703,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 308.229 143.383 0)
+		(at 307.34 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9616,7 +9712,7 @@
 		(fields_autoplaced yes)
 		(uuid "76c2b5f2-bd4b-41bc-a730-a83a4ee4af57")
 		(property "Reference" "#PWR014"
-			(at 308.229 149.733 0)
+			(at 307.34 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9625,7 +9721,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 308.229 148.463 0)
+			(at 307.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9633,7 +9729,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 308.229 143.383 0)
+			(at 307.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9642,7 +9738,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 308.229 143.383 0)
+			(at 307.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9651,7 +9747,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 308.229 143.383 0)
+			(at 307.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9660,7 +9756,7 @@
 			)
 		)
 		(property "Field5" ""
-			(at 308.229 143.383 0)
+			(at 307.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9829,7 +9925,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:MMBT3904")
-		(at 305.689 177.673 0)
+		(at 304.8 165.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9838,7 +9934,7 @@
 		(fields_autoplaced yes)
 		(uuid "8bfaebce-1cae-4c8c-94c0-2db22d90a6ac")
 		(property "Reference" "Q3"
-			(at 310.769 176.4029 0)
+			(at 309.88 163.8299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9847,7 +9943,7 @@
 			)
 		)
 		(property "Value" "MMBT3904"
-			(at 310.769 178.9429 0)
+			(at 309.88 166.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9856,7 +9952,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
-			(at 310.769 179.578 0)
+			(at 309.88 167.005 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9867,7 +9963,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
-			(at 305.689 177.673 0)
+			(at 304.8 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9877,7 +9973,7 @@
 			)
 		)
 		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 305.689 177.673 0)
+			(at 304.8 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9886,7 +9982,7 @@
 			)
 		)
 		(property "JLCPCB Part #" "C18536"
-			(at 305.689 177.673 0)
+			(at 304.8 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9895,7 +9991,7 @@
 			)
 		)
 		(property "MFR.Part #" "2N3904S-RTK/PS"
-			(at 305.689 177.673 0)
+			(at 304.8 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9904,7 +10000,7 @@
 			)
 		)
 		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/KECSemicon-2N3904S_RTKPS/C18536"
-			(at 305.689 177.673 0)
+			(at 304.8 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9932,7 +10028,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 308.229 159.893 0)
+		(at 307.34 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9940,7 +10036,7 @@
 		(dnp no)
 		(uuid "94db9432-d932-40f3-a8cc-04e8e6186f44")
 		(property "Reference" "#PWR08"
-			(at 308.229 163.703 0)
+			(at 307.34 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9949,7 +10045,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 308.61 155.4988 0)
+			(at 307.721 142.9258 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9957,7 +10053,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 308.229 159.893 0)
+			(at 307.34 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9966,7 +10062,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 308.229 159.893 0)
+			(at 307.34 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9975,7 +10071,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 308.229 159.893 0)
+			(at 307.34 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10071,7 +10167,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 308.229 186.563 0)
+		(at 307.34 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10080,7 +10176,7 @@
 		(fields_autoplaced yes)
 		(uuid "c2b798e5-d984-4685-9258-8b246deac93c")
 		(property "Reference" "#PWR016"
-			(at 308.229 192.913 0)
+			(at 307.34 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10089,7 +10185,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 308.229 191.643 0)
+			(at 307.34 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10097,7 +10193,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 308.229 186.563 0)
+			(at 307.34 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10106,7 +10202,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 308.229 186.563 0)
+			(at 307.34 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10115,7 +10211,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 308.229 186.563 0)
+			(at 307.34 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10124,7 +10220,7 @@
 			)
 		)
 		(property "Field5" ""
-			(at 308.229 186.563 0)
+			(at 307.34 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10146,7 +10242,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 308.737 80.264 0)
+		(at 307.848 67.691 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10155,7 +10251,7 @@
 		(fields_autoplaced yes)
 		(uuid "c3ccc9ac-9e55-42bc-b18c-84261a45d487")
 		(property "Reference" "R5"
-			(at 311.15 78.9939 0)
+			(at 310.261 66.4209 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10163,8 +10259,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 311.15 81.5339 0)
+		(property "Value" "3.3K"
+			(at 310.261 68.9609 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10173,7 +10269,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 306.959 80.264 90)
+			(at 306.07 67.691 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10181,8 +10277,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 308.737 80.264 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 307.848 67.691 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10191,7 +10287,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 308.737 80.264 0)
+			(at 307.848 67.691 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10199,8 +10295,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 308.737 80.264 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 307.848 67.691 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10208,8 +10304,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 308.737 80.264 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 307.848 67.691 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10217,8 +10313,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 308.737 80.264 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 307.848 67.691 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10243,7 +10339,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 308.229 200.533 0)
+		(at 307.34 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10251,7 +10347,7 @@
 		(dnp no)
 		(uuid "c964cb36-03a6-4689-8965-79ed43497870")
 		(property "Reference" "#PWR09"
-			(at 308.229 204.343 0)
+			(at 307.34 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10260,7 +10356,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 308.61 196.1388 0)
+			(at 307.721 183.5658 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10268,7 +10364,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 308.229 200.533 0)
+			(at 307.34 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10277,7 +10373,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 308.229 200.533 0)
+			(at 307.34 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10286,7 +10382,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 308.229 200.533 0)
+			(at 307.34 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10307,7 +10403,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:MMBT3904")
-		(at 305.689 218.313 0)
+		(at 304.8 205.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10315,7 +10411,7 @@
 		(dnp no)
 		(uuid "cd75ac00-cc2c-466e-80c7-944b95f879c3")
 		(property "Reference" "Q4"
-			(at 302.895 222.377 0)
+			(at 302.006 209.804 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10324,7 +10420,7 @@
 			)
 		)
 		(property "Value" "MMBT3904"
-			(at 297.815 225.425 0)
+			(at 296.926 212.852 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10333,7 +10429,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
-			(at 310.769 220.218 0)
+			(at 309.88 207.645 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10344,7 +10440,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
-			(at 305.689 218.313 0)
+			(at 304.8 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10354,7 +10450,7 @@
 			)
 		)
 		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 305.689 218.313 0)
+			(at 304.8 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10363,7 +10459,7 @@
 			)
 		)
 		(property "JLCPCB Part #" "C18536"
-			(at 305.689 218.313 0)
+			(at 304.8 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10372,7 +10468,7 @@
 			)
 		)
 		(property "MFR.Part #" "2N3904S-RTK/PS"
-			(at 305.689 218.313 0)
+			(at 304.8 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10381,7 +10477,7 @@
 			)
 		)
 		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/KECSemicon-2N3904S_RTKPS/C18536"
-			(at 305.689 218.313 0)
+			(at 304.8 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10409,7 +10505,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 294.767 91.694 270)
+		(at 293.878 79.121 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10418,15 +10514,15 @@
 		(fields_autoplaced yes)
 		(uuid "dafb3f71-eff6-4c1d-ab11-bf1d9e09920f")
 		(property "Reference" "R4"
-			(at 294.767 85.09 90)
+			(at 293.878 72.517 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10k"
-			(at 294.767 87.63 90)
+		(property "Value" "3.3K"
+			(at 293.878 75.057 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10434,7 +10530,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 294.767 89.916 90)
+			(at 293.878 77.343 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10442,8 +10538,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 294.767 91.694 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 293.878 79.121 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10452,7 +10548,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 294.767 91.694 0)
+			(at 293.878 79.121 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10460,8 +10556,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 294.767 91.694 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 293.878 79.121 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10469,8 +10565,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 294.767 91.694 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 293.878 79.121 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10478,8 +10574,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 294.767 91.694 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 293.878 79.121 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10504,7 +10600,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 294.259 218.313 270)
+		(at 293.37 205.74 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10513,15 +10609,15 @@
 		(fields_autoplaced yes)
 		(uuid "dd279133-eab6-4dd0-8e75-ce1bd877a326")
 		(property "Reference" "R10"
-			(at 294.259 212.09 90)
+			(at 293.37 199.517 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10k"
-			(at 294.259 214.63 90)
+		(property "Value" "3.3K"
+			(at 293.37 202.057 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10529,7 +10625,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 294.259 216.535 90)
+			(at 293.37 203.962 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10537,8 +10633,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 294.259 218.313 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 293.37 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10547,7 +10643,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 294.259 218.313 0)
+			(at 293.37 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10555,8 +10651,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 294.259 218.313 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 293.37 205.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10564,8 +10660,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 294.259 218.313 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 293.37 205.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10573,8 +10669,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 294.259 218.313 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 293.37 205.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10599,7 +10695,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 308.229 123.063 0)
+		(at 307.34 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10608,7 +10704,7 @@
 		(fields_autoplaced yes)
 		(uuid "e3d67f45-ea38-41b4-83a0-e50dcfc817f8")
 		(property "Reference" "R7"
-			(at 311.15 121.7929 0)
+			(at 310.261 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10616,8 +10712,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 311.15 124.3329 0)
+		(property "Value" "3.3K"
+			(at 310.261 111.7599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10626,7 +10722,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 306.451 123.063 90)
+			(at 305.562 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10634,8 +10730,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 308.229 123.063 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 307.34 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10644,7 +10740,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 308.229 123.063 0)
+			(at 307.34 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10652,8 +10748,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 308.229 123.063 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 307.34 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10661,8 +10757,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 308.229 123.063 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 307.34 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10670,8 +10766,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 308.229 123.063 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 307.34 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10696,7 +10792,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 308.229 166.243 0)
+		(at 307.34 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10705,7 +10801,7 @@
 		(fields_autoplaced yes)
 		(uuid "e6d675a8-1078-4f43-8e2d-2109c16f5814")
 		(property "Reference" "R9"
-			(at 310.769 164.9729 0)
+			(at 309.88 152.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10713,8 +10809,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 310.769 167.5129 0)
+		(property "Value" "3.3K"
+			(at 309.88 154.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10723,7 +10819,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 306.451 166.243 90)
+			(at 305.562 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10731,8 +10827,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 308.229 166.243 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579706691952099328"
+			(at 307.34 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10741,7 +10837,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 308.229 166.243 0)
+			(at 307.34 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10749,8 +10845,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C22356686"
-			(at 308.229 166.243 90)
+		(property "JLCPCB Part #" "C26010"
+			(at 307.34 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10758,8 +10854,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFR.Part #" "RCA0510KFLF"
-			(at 308.229 166.243 90)
+		(property "MFR.Part #" "0805W8F3301T5E"
+			(at 307.34 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10767,8 +10863,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/23790130-RCA0510KFLF/C22356686"
-			(at 308.229 166.243 90)
+		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/26753-0805W8F3301T5E/C26010"
+			(at 307.34 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10793,7 +10889,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:MMBT3904")
-		(at 305.689 134.493 0)
+		(at 304.8 121.92 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10802,7 +10898,7 @@
 		(fields_autoplaced yes)
 		(uuid "e7f1f7b0-17a7-48c7-81de-f03eda45ae6a")
 		(property "Reference" "Q2"
-			(at 310.769 133.2229 0)
+			(at 309.88 120.6499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10811,7 +10907,7 @@
 			)
 		)
 		(property "Value" "MMBT3904"
-			(at 310.769 135.7629 0)
+			(at 309.88 123.1899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10820,7 +10916,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
-			(at 310.769 136.398 0)
+			(at 309.88 123.825 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10831,7 +10927,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
-			(at 305.689 134.493 0)
+			(at 304.8 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10841,7 +10937,7 @@
 			)
 		)
 		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
-			(at 305.689 134.493 0)
+			(at 304.8 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10850,7 +10946,7 @@
 			)
 		)
 		(property "JLCPCB Part #" "C18536"
-			(at 305.689 134.493 0)
+			(at 304.8 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10859,7 +10955,7 @@
 			)
 		)
 		(property "MFR.Part #" "2N3904S-RTK/PS"
-			(at 305.689 134.493 0)
+			(at 304.8 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10868,7 +10964,7 @@
 			)
 		)
 		(property "JLCPCB URL" "https://jlcpcb.com/partdetail/KECSemicon-2N3904S_RTKPS/C18536"
-			(at 305.689 134.493 0)
+			(at 304.8 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10896,7 +10992,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 308.229 227.203 0)
+		(at 307.34 214.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10905,7 +11001,7 @@
 		(fields_autoplaced yes)
 		(uuid "f0cf1cf6-9635-4614-9cc6-60a8f6cab969")
 		(property "Reference" "#PWR018"
-			(at 308.229 233.553 0)
+			(at 307.34 220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10914,7 +11010,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 308.229 232.283 0)
+			(at 307.34 219.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10922,7 +11018,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 308.229 227.203 0)
+			(at 307.34 214.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10931,7 +11027,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 308.229 227.203 0)
+			(at 307.34 214.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10940,7 +11036,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 308.229 227.203 0)
+			(at 307.34 214.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10949,7 +11045,7 @@
 			)
 		)
 		(property "Field5" ""
-			(at 308.229 227.203 0)
+			(at 307.34 214.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -136,7 +136,7 @@
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.4,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -616,7 +616,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "Pi1551-III Module-rotated.net",
-      "plot": "",
+      "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "Pi1551-III Module-rotated.dsn",
       "step": "",

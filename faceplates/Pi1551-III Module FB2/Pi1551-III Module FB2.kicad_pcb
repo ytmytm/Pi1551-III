@@ -43,8 +43,8 @@
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions yes)
-			(usegerberattributes no)
-			(usegerberadvancedattributes no)
+			(usegerberattributes yes)
+			(usegerberadvancedattributes yes)
 			(creategerberjobfile no)
 			(dashed_line_dash_ratio 12.000000)
 			(dashed_line_gap_ratio 3.000000)
@@ -75,7 +75,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "export/")
+			(outputdirectory "gerbers/")
 		)
 	)
 	(net 0 "")
@@ -1647,6 +1647,18 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "f9772803-9e73-4a5d-b74a-144d65ba6d50")
+	)
+	(gr_text "JLCJLCJLCJLC"
+		(at 154.686 58.42 0)
+		(layer "F.SilkS")
+		(uuid "067100f4-39aa-411b-aa3b-8deff03347bd")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
 	)
 	(gr_text "5V DC"
 		(at 83.185 59.055 0)

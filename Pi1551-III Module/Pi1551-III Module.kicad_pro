@@ -616,7 +616,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "Pi1551-III Module.net",
-      "plot": "",
+      "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "Pi1551-III Module.dsn",
       "step": "",

@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Pi1551-III Module (Panel)")
-		(date "2026-02-02")
-		(rev "1")
+		(date "2026-03-03")
+		(rev "2")
 		(comment 4 "Front panel for the main module, designed for slotting into it.")
 	)
 	(lib_symbols
@@ -732,7 +732,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Jumper:SolderJumper_3_Bridged12"
+		(symbol "Jumper:SolderJumper_3_Open"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -748,7 +748,7 @@
 					)
 				)
 			)
-			(property "Value" "SolderJumper_3_Bridged12"
+			(property "Value" "SolderJumper_3_Open"
 				(at 0 2.794 0)
 				(effects
 					(font
@@ -774,7 +774,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
+			(property "Description" "Solder Jumper, 3-pole, open"
 				(at 0 0 0)
 				(effects
 					(font
@@ -792,7 +792,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SolderJumper*Bridged12*"
+			(property "ki_fp_filters" "SolderJumper*Open*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -801,7 +801,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "SolderJumper_3_Bridged12_0_1"
+			(symbol "SolderJumper_3_Open_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy -2.032 0)
@@ -824,17 +824,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(rectangle
-					(start -1.016 0.508)
-					(end -0.508 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(arc
@@ -933,7 +922,7 @@
 					)
 				)
 			)
-			(symbol "SolderJumper_3_Bridged12_1_1"
+			(symbol "SolderJumper_3_Open_1_1"
 				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -2032,6 +2021,17 @@
 			(justify left)
 		)
 		(uuid "2ea2eaa3-4cf7-4d58-9b6e-1c88ee367cc8")
+	)
+	(text "SH1106"
+		(exclude_from_sim no)
+		(at 186.436 75.692 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5606c0b8-d430-4f00-b96c-5055e5dfe925")
 	)
 	(text "Down==SW3->A\nUp==SW2->B\nEnter==SW1->S1"
 		(exclude_from_sim no)
@@ -4417,7 +4417,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_3_Bridged12")
+		(lib_id "Jumper:SolderJumper_3_Open")
 		(at 181.61 38.1 270)
 		(mirror x)
 		(unit 1)
@@ -4434,7 +4434,7 @@
 				)
 			)
 		)
-		(property "Value" "SolderJumper_3_Bridged12"
+		(property "Value" "SolderJumper_3_Open"
 			(at 185.42 38.1 0)
 			(effects
 				(font
@@ -4443,7 +4443,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels"
 			(at 181.61 38.1 0)
 			(effects
 				(font
@@ -4461,7 +4461,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
+		(property "Description" "Solder Jumper, 3-pole, open"
 			(at 181.61 38.1 0)
 			(effects
 				(font
@@ -4554,7 +4554,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Jumper:SolderJumper_3_Bridged12")
+		(lib_id "Jumper:SolderJumper_3_Open")
 		(at 163.83 38.1 90)
 		(mirror x)
 		(unit 1)
@@ -4571,7 +4571,7 @@
 				)
 			)
 		)
-		(property "Value" "SolderJumper_3_Bridged12"
+		(property "Value" "SolderJumper_3_Open"
 			(at 160.02 38.1 0)
 			(effects
 				(font
@@ -4580,7 +4580,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels"
 			(at 163.83 38.1 0)
 			(effects
 				(font
@@ -4598,7 +4598,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
+		(property "Description" "Solder Jumper, 3-pole, open"
 			(at 163.83 38.1 0)
 			(effects
 				(font

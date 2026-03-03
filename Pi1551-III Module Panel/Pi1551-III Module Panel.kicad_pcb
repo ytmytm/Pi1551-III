@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "Pi1551-III Module (Panel)")
-		(date "2026-02-02")
-		(rev "1")
+		(date "2026-03-03")
+		(rev "2")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -35,6 +35,45 @@
 		(33 "B.Fab" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(tenting front back)
@@ -150,7 +189,7 @@
 		(path "/00000000-0000-0000-0000-00006282631c")
 		(sheetname "/")
 		(sheetfile "Pi1551-III Module Panel.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.6 0)
@@ -244,7 +283,7 @@
 		(path "/00000000-0000-0000-0000-000062826824")
 		(sheetname "/")
 		(sheetfile "Pi1551-III Module Panel.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.6 0)
@@ -338,7 +377,7 @@
 		(path "/00000000-0000-0000-0000-000062826d8f")
 		(sheetname "/")
 		(sheetfile "Pi1551-III Module Panel.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.6 0)
@@ -432,7 +471,7 @@
 		(path "/00000000-0000-0000-0000-000062827110")
 		(sheetname "/")
 		(sheetfile "Pi1551-III Module Panel.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(fp_circle
 			(center 0 0)
 			(end 2.6 0)
@@ -4073,12 +4112,12 @@
 			)
 		)
 	)
-	(footprint "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
+	(footprint "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels"
 		(layer "B.Cu")
 		(uuid "00000000-0000-0000-0000-000062c8e445")
 		(at 142.24 121.158 -90)
-		(descr "SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip, labeled with numbers")
-		(tags "net tie solder jumper bridged")
+		(descr "SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, open, labeled with numbers")
+		(tags "solder jumper open")
 		(property "Reference" "JP3"
 			(at 0 1.8 90)
 			(layer "B.SilkS")
@@ -4091,7 +4130,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SolderJumper_3_Bridged12"
+		(property "Value" "SolderJumper_3_Open"
 			(at 0 -1.9 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -4118,7 +4157,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
+		(property "Description" "Solder Jumper, 3-pole, open"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -4132,25 +4171,12 @@
 				(justify mirror)
 			)
 		)
-		(property ki_fp_filters "SolderJumper*Bridged12*")
+		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/cebc630e-c57a-4755-9b41-8e920d2b58fb")
 		(sheetname "/")
 		(sheetfile "Pi1551-III Module Panel.kicad_sch")
 		(zone_connect 1)
 		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
-		(net_tie_pad_groups "1, 2")
-		(fp_poly
-			(pts
-				(xy -0.9 0.3) (xy -0.4 0.3) (xy -0.4 -0.3) (xy -0.9 -0.3)
-			)
-			(stroke
-				(width 0)
-				(type solid)
-			)
-			(fill yes)
-			(layer "B.Cu")
-			(uuid "d6d30a19-7a29-4274-9556-fd4f5f00397e")
-		)
 		(fp_rect
 			(start -0.75 0.75)
 			(end 0.75 -0.75)
@@ -4160,7 +4186,7 @@
 			)
 			(fill yes)
 			(layer "B.Mask")
-			(uuid "6037970d-fbd8-4fcc-9e65-76da334580e3")
+			(uuid "55a75899-a394-4500-84a3-9495c2c82a1a")
 		)
 		(fp_line
 			(start -1.4 1)
@@ -4170,7 +4196,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "f542f4c8-e637-40b9-a877-0c2384ec7b17")
+			(uuid "8e2cf70e-cd24-45f1-aee6-7b83e0600737")
 		)
 		(fp_line
 			(start 2.05 0.3)
@@ -4180,7 +4206,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "62b7faf0-5353-42d8-a5c3-14824aea75ad")
+			(uuid "4248e92b-2ea1-4aaa-9b73-9f74451fb6fa")
 		)
 		(fp_line
 			(start -2.05 -0.3)
@@ -4190,7 +4216,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "792a2e2c-9468-4dd8-95fc-0f24eaf78d3e")
+			(uuid "e8421388-2162-402a-a63c-2a97deeee0f0")
 		)
 		(fp_line
 			(start 1.4 -1)
@@ -4200,7 +4226,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "1d9857e1-5256-4904-89e1-a0a4923cc02d")
+			(uuid "0823b35c-bee6-4fba-8d97-091f6da2f9f0")
 		)
 		(fp_arc
 			(start -1.35 1)
@@ -4211,7 +4237,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "95ed379c-b981-464d-8320-0b993a95944c")
+			(uuid "87537cc8-c9b3-419f-8a18-76cb03f7bc09")
 		)
 		(fp_arc
 			(start 2.05 0.3)
@@ -4222,7 +4248,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "0a46221b-b93f-4ed4-8c53-20b5bacb1007")
+			(uuid "cdb77e4c-fa68-49ea-94a9-e27f2521bab4")
 		)
 		(fp_arc
 			(start -2.05 -0.3)
@@ -4233,7 +4259,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "f822faa2-3a9c-4e68-bdb5-8b321852fb54")
+			(uuid "3a1eee41-8b38-4263-b9db-d6251dff0fd7")
 		)
 		(fp_arc
 			(start 1.35 -1)
@@ -4244,7 +4270,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "b872ff36-40ca-4f98-9c8a-336797f56113")
+			(uuid "170568a8-3f78-401e-ab10-3d2fd70a05d3")
 		)
 		(fp_line
 			(start -2.3 1.25)
@@ -4254,7 +4280,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "2bc08901-1bff-4c03-afa5-e45c036cd2c4")
+			(uuid "549e16fd-a64b-4fc8-b2ed-e7f08b9d23f3")
 		)
 		(fp_line
 			(start -2.3 1.25)
@@ -4264,7 +4290,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "418f737c-80cc-49b7-a60d-83a38c9ba95f")
+			(uuid "b72724f9-e979-4759-8e3d-4e49436b0e86")
 		)
 		(fp_line
 			(start 2.3 -1.25)
@@ -4274,7 +4300,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "e5f2bda8-d09d-4074-a213-f6760c0e5306")
+			(uuid "b843f117-053d-4c5f-8e50-08010feb7b5f")
 		)
 		(fp_line
 			(start 2.3 -1.25)
@@ -4284,7 +4310,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "a1069763-85c3-4fd1-baed-a31031725e0f")
+			(uuid "affb6c3a-a3c6-4a1f-bf5f-c669a4a1cc59")
 		)
 		(fp_text user "1"
 			(at -2.6 0 90)
@@ -4324,13 +4350,6 @@
 				(anchor rect)
 			)
 			(primitives
-				(gr_poly
-					(pts
-						(xy 0.55 -0.75) (xy 0 -0.75) (xy 0 0.75) (xy 0.55 0.75)
-					)
-					(width 0)
-					(fill yes)
-				)
 				(gr_circle
 					(center 0 -0.25)
 					(end 0.5 -0.25)
@@ -4340,6 +4359,13 @@
 				(gr_circle
 					(center 0 0.25)
 					(end 0.5 0.25)
+					(width 0)
+					(fill yes)
+				)
+				(gr_poly
+					(pts
+						(xy 0.55 -0.75) (xy 0 -0.75) (xy 0 0.75) (xy 0.55 0.75)
+					)
 					(width 0)
 					(fill yes)
 				)
@@ -4393,14 +4419,14 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
+	(footprint "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels"
 		(layer "B.Cu")
 		(uuid "00000000-0000-0000-0000-000062c8e49b")
 		(at 135.89 121.158 90)
-		(descr "SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip, labeled with numbers")
-		(tags "net tie solder jumper bridged")
+		(descr "SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, open, labeled with numbers")
+		(tags "solder jumper open")
 		(property "Reference" "JP4"
-			(at 0 1.8 90)
+			(at 0 1.8 270)
 			(layer "B.SilkS")
 			(uuid "807909c6-4f4e-44ae-be2d-03f49c23589c")
 			(effects
@@ -4411,8 +4437,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SolderJumper_3_Bridged12"
-			(at 0 -1.9 90)
+		(property "Value" "SolderJumper_3_Open"
+			(at 0 -1.9 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "391d5c5c-d6ae-466b-9fc8-5849d8f5ae44")
@@ -4438,7 +4464,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
+		(property "Description" "Solder Jumper, 3-pole, open"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -4452,25 +4478,12 @@
 				(justify mirror)
 			)
 		)
-		(property ki_fp_filters "SolderJumper*Bridged12*")
+		(property ki_fp_filters "SolderJumper*Open*")
 		(path "/637aa5a3-4993-4d71-8855-14c060ddd511")
 		(sheetname "/")
 		(sheetfile "Pi1551-III Module Panel.kicad_sch")
 		(zone_connect 1)
 		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
-		(net_tie_pad_groups "1, 2")
-		(fp_poly
-			(pts
-				(xy -0.9 0.3) (xy -0.4 0.3) (xy -0.4 -0.3) (xy -0.9 -0.3)
-			)
-			(stroke
-				(width 0)
-				(type solid)
-			)
-			(fill yes)
-			(layer "B.Cu")
-			(uuid "d91f651e-4bba-40bb-acbe-d67e7938d60d")
-		)
 		(fp_rect
 			(start -0.75 0.75)
 			(end 0.75 -0.75)
@@ -4480,7 +4493,7 @@
 			)
 			(fill yes)
 			(layer "B.Mask")
-			(uuid "b0d441bb-de00-4bdc-abf1-24cbd12e5e01")
+			(uuid "8c37bbd7-eb8c-4428-acf6-9705662b19d6")
 		)
 		(fp_line
 			(start 1.4 -1)
@@ -4490,7 +4503,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "72df6818-a389-4c6d-bb1b-ca6f25bf2b13")
+			(uuid "e65027b2-06c5-4d39-9732-33cd74f8e2b9")
 		)
 		(fp_line
 			(start -2.05 -0.3)
@@ -4500,7 +4513,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "9005d806-a71d-4188-817f-163d31eb0cfa")
+			(uuid "c9440928-57cb-46ae-b6b3-c08cce96ed4c")
 		)
 		(fp_line
 			(start 2.05 0.3)
@@ -4510,7 +4523,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "4adfafaf-ad87-4bfc-9f8f-b8af99d4aec8")
+			(uuid "b387e650-e1c0-499f-ac78-ca81d8ae8ed2")
 		)
 		(fp_line
 			(start -1.4 1)
@@ -4520,7 +4533,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "3ccb916c-1b69-4ba9-948c-902a20036061")
+			(uuid "cea746a4-602c-4917-a89a-49241f0aed2d")
 		)
 		(fp_arc
 			(start 1.35 -1)
@@ -4531,7 +4544,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "d8bdac0f-ab53-4da0-8e2f-a7dd4069cf37")
+			(uuid "46648982-65c7-4f60-a180-ba0905eeec5b")
 		)
 		(fp_arc
 			(start -2.05 -0.3)
@@ -4542,7 +4555,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "7e6afd91-b708-4654-b862-ac40bb65bd59")
+			(uuid "4b6bc314-eabb-4306-b2bd-8cc82ffaefb7")
 		)
 		(fp_arc
 			(start 2.05 0.3)
@@ -4553,7 +4566,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "676355ee-f51f-47f4-b7df-e2d87ed1e9fb")
+			(uuid "b4315bfd-bd0c-4bc8-9afd-58e69a781a50")
 		)
 		(fp_arc
 			(start -1.35 1)
@@ -4564,7 +4577,7 @@
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "06a215fa-a3c0-4d49-a18f-9d9bc8e2ce75")
+			(uuid "de5ba549-43b8-46d1-80b9-68ae38aa047c")
 		)
 		(fp_line
 			(start 2.3 -1.25)
@@ -4574,7 +4587,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "1a1519d8-bcad-4fe4-ad8a-94706fcc5b2d")
+			(uuid "d80e0ceb-b115-4e8d-8745-46a1ff6783fa")
 		)
 		(fp_line
 			(start 2.3 -1.25)
@@ -4584,7 +4597,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "b5b97559-42ea-48a3-8450-06e38f95b022")
+			(uuid "0e39ce00-6b83-4438-bfc1-ae220e894301")
 		)
 		(fp_line
 			(start -2.3 1.25)
@@ -4594,7 +4607,7 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "76b0b4c8-6c8a-4feb-959c-b959ce9ec152")
+			(uuid "a3c0e6ac-9f80-4a4a-9266-928c865fbb82")
 		)
 		(fp_line
 			(start -2.3 1.25)
@@ -4604,10 +4617,10 @@
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "91234ef6-f751-4f61-aeb0-6832b0aa8258")
+			(uuid "a9c5bceb-d45f-4bd4-bb8b-69824d4e4b73")
 		)
 		(fp_text user "3"
-			(at 2.6 0 90)
+			(at 2.6 0 270)
 			(layer "B.SilkS")
 			(uuid "b2c7dd7c-e427-4900-8ecf-ac4a70e75805")
 			(effects
@@ -4619,7 +4632,7 @@
 			)
 		)
 		(fp_text user "1"
-			(at -2.6 0 90)
+			(at -2.6 0 270)
 			(layer "B.SilkS")
 			(uuid "bf8e2ed4-f50e-44f7-b929-b26ea78e540c")
 			(effects
@@ -4644,13 +4657,6 @@
 				(anchor rect)
 			)
 			(primitives
-				(gr_poly
-					(pts
-						(xy 0.55 -0.75) (xy 0 -0.75) (xy 0 0.75) (xy 0.55 0.75)
-					)
-					(width 0)
-					(fill yes)
-				)
 				(gr_circle
 					(center 0 -0.25)
 					(end 0.5 -0.25)
@@ -4660,6 +4666,13 @@
 				(gr_circle
 					(center 0 0.25)
 					(end 0.5 0.25)
+					(width 0)
+					(fill yes)
+				)
+				(gr_poly
+					(pts
+						(xy 0.55 -0.75) (xy 0 -0.75) (xy 0 0.75) (xy 0.55 0.75)
+					)
 					(width 0)
 					(fill yes)
 				)

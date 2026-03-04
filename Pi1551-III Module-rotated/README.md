@@ -10,7 +10,7 @@ Assembly of this module is described in the top-level [README Assembly section](
 
 
 # 2> Schematic
-The supplied KiCad files should be sufficient as both a schematic and as a  starting point for ordering PCBs (basically you could just zip the contents of the export folder and upload that on a fabrication site), the schematic is also available in [PDF-format](documentation/schematic) (if present in this repo) for when things don’t work as expected after assembly.
+The supplied KiCad files should be sufficient as both a schematic and as a  starting point for ordering PCBs (basically you could just zip the contents of the export folder and upload that on a fabrication site), the schematic is also available in [PDF-format](../documentation/schematic) (if present in this repo) for when things don’t work as expected after assembly.
 
 # 3> BOM
 This BOM matches the schematic in this folder. Optional parts in parentheses. Gerbers, a BOM with JLCPCB part numbers, and SMD position data are in the [Releases](https://github.com/ytmytm/Pi1551-III/releases) section.

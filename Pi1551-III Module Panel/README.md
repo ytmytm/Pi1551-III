@@ -14,7 +14,7 @@ Assembly of this panel is described in the top-level [README Assembly section](.
 The supplied KiCad files should be sufficient as both a schematic and as a  starting point for ordering PCBs (basically you could just zip the contents of the export folder and upload that on a fabrication site), the schematic is also available in [PDF-format](../documentation/schematic) (if present in this repo) for when things don’t work as expected after assembly.
 
 # 3> BOM
-Most parts should be easy to get a hold of from your favourite local electronic component shop, but given that I don't have access to such shops where I live so everything was based on whatever I could get cheapest from eBay/AliExpress (free shipping, but plan on waiting 3-4 weeks for delivery). Components in parenthesis can be considered optional for features beyond the more basic functionality, but where's the fun in that? You deserve the complete package.
+This BOM matches the schematic in this folder. Optional parts in parentheses. Build files (Gerbers, etc.) are in the [Releases](https://github.com/ytmytm/Pi1551-III/releases) section.
 
 | Reference             | Item                                                              | Count | Order  |
 | --------------------- | ----------------------------------------------------------------- | ----- | ------ |

@@ -91,7 +91,7 @@ I had some trouble building the first unit, so here are some hints to make it ea
   - Then solder the first 1–2 pins on each end.
   - Check the angle again before soldering the rest.
 
-At this point the device is basically complete and ready for testing. The remaining steps (faceplates, etc.) are better described and illustrated in the **[C64-Pi1541-III gallery](https://github.com/tebl/C64-Pi1541-III/tree/main/gallery)** and in the original [assembling one](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/assembling_one.md) and [setting it up](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/setting_it_up.md) guides; substitute Pi1551-III module and Pi1551 firmware where the docs refer to Pi1541/1541.
+At this point the device is basically complete and ready for testing. Remaining mechanical steps (faceplates, etc.) are illustrated in the **[C64-Pi1541-III gallery](https://github.com/tebl/C64-Pi1541-III/tree/main/gallery)** and [assembling one](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/assembling_one.md). For SD card preparation and firmware configuration, see the **[Pi1551](https://github.com/ytmytm/Pi1551)** project.
 
 ## 4. Cables
 

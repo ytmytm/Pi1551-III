@@ -43,7 +43,7 @@ This BOM matches the schematic in this folder. Optional parts in parentheses. Ge
 
 **\*** Recommended not to install J1 (barrel jack) or C6 (470 µF). Power the device from the Raspberry Pi’s USB Micro port.
 
-**D2 (Schottky):** Orient with the cathode stripe towards the  silkscreen mark.
+**D2 (Schottky):** Orient with the cathode stripe towards the silkscreen mark.
 
 1) For LEDs on [Pi1551-III Module Panel](../Pi1551-III%20Module%20Panel); 470 Ω suits most coloured LEDs — use a higher value for blue or "bright" types.
 2) M3 nylon standoff kits usually contain what you need; check quantities.

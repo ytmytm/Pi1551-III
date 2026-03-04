@@ -7,14 +7,7 @@ With the power issues either solved or ruled out, does the display work? If it i
 
 Put it back in again, still nothing on the OLED-display despite having checked that the configuration is correct? Double-check your previous notes so that you've soldered JP3/JP4 on the [Pi1541-III Module Panel](https://github.com/tebl/C64-Pi1541-III/tree/main/C64%20Pi1541-III%20Module%20Panel) according to the actual pin order on your OLED - if you've forgotten to do so, then do it now and try again. Did you do it the wrong way around and have already attempted to power up the thing, you know that it is probably dead now? In which case, you should order a new display though you may have gotten lucky. If you observe graphical glitches, you may have configured the display as a *ssd1306*-based display and although the sales listing usually say *ssd1306* - every 1.3" display I've encountered are actually based on the *sh1106* and need to be configured as such.
 
-You've gotten this far, then that's super-awesome! Hopefully you can select a d64 file from your SD-card, move up/down to the file and click select to start emulating a drive with that disk inserted. Try to load up the directory listing from your Commodore 64:
+You've gotten this far, then that's super-awesome! Hopefully you can select a d64 file from your SD-card, move up/down to the file and click select to start emulating a drive with that disk inserted. Try to load up the directory listing from your Commodore 16 or Plus4:
 ```
-LOAD "$",8
+DIRECTORY
 ```
-If it fails instantly with a message saying "DEVICE NOT PRESENT", your 7406 might not be working as it should or possibly not at all (ensure your C64 actually works with the same cable and with a real disk drive first, if possible). Try a different chip and hope that it works.
-
-If you get a different error or quite possibly the Commodore 64 just hangs there without doing anything, a good bet is that the I2C level converter is crappy - I've had around 20% DOA on those things, so it is not unlikely. My best recommendation is to use a multimeter and measure the resistance across various points, more than likely you can spot the one where nothing is connected by comparing between them (they usually come in packs of 5 or 10 so you should have spares).
-
-Something else that may come up is that some 7406 chips have been distributed with known issues, these can cause slightly less dramatic faults and simply cause data to load in with errors. For this reason the creator of the Pi1541-software, also recommends that you test by loading in *Ghost'n Goblins Arcade* to check that the chip is performing adequately - in particular the loading screen will have graphical issues. No Pi1541-III is therefore never considered adequately tested before it can reliably load this particular disk image. Your mileage may vary, but the chips that I've had the most luck with have been specifically marked *7406PC* and can be usually found for sale at a higher price than the cheap ones.
-
-Finally, if the computer just says READY then that is not an error - you just need to brush up on your BASIC commands. That's all I have, please feel free to join the C64 Facebook group if more assistance is needed (there's usually helpful people hanging around there).

@@ -1,55 +1,127 @@
-# C64 Pi1541-III
-Well... if you're here, then that new and shiny SD2IEC for your Commodore 64 wasn't cycle-exact enough for you? Sure, there are great FPGA-based solutions available that can be purchased at a premium pricepoint. For the rest of us who are either on a tight budget - or - simply want something that they can build at home, then the excellent Pi1541-software written by Steve White may very well be the solution you've been looking for. With a Raspberry Pi 3 at its core, it is able to provide cycle-exact disk drive emulation with many improvements over the drive you had in your youth!
+# Pi1551-III
 
-![Pi1541-III](https://github.com/tebl/C64-Pi1541-III/raw/main/gallery/2023-03-22%2023.50.13.jpg)
+A **1551 floppy emulator** for Commodore C16, C116 and Plus/4, in the same mechanical and aesthetic package as the [C64 Pi1541-III](https://github.com/tebl/C64-Pi1541-III): Raspberry Pi 3–based, 1.3" OLED, rotary encoder, and stack of PCBs with faceplates. 
 
-A Pi1541 can be constructed in many ways, but even though you can easily build one without the help of a PCB such as the ones provided by this project - I've found it a lot easier to make them work when you have a PCB available. I've released the design files for a more traditional Raspberry Pi-hat if you would rather build one of those, these can be found in my old repository at [C64-Pi1541-Module](https://github.com/tebl/C64-Pi1541-Module). A slightly different take on the device can also be found at [C64-Pi1541-II](https://github.com/tebl/C64-Pi1541-II) as it was made to resemble a slightly smaller stack of floppy disks.
+![Front view](media/13.view-4.jpg)
 
-![Three versions of Pi1541](https://github.com/tebl/C64-Pi1541-III/raw/main/gallery/versions.png)
+This variant uses the **[Pi1551](https://github.com/ytmytm/Pi1551)** firmware and connects to the computer via **[tcbm2sd](https://github.com/ytmytm/plus4-tcbm2sd)** (TCBM bus). It also adds a **MiniDIN-7** port for **TAP tape playback** with a simple 1:1 male-to-male cable to the machine’s tape port.
 
-With this third version I've instead attempted to make one that's more akin to a modern device, incorporating a 1.3" OLED on the front as being controlled via the use of a rotary encoder. While the design aesthetic makes it slightly harder to build than your standard Pi1541, I believe that it more than makes up for it.
+> **WARNING — tcbm2sd only**  
+> This device must **only** be connected to a **tcbm2sd** adapter. **Do not** connect it to an original 1551 paddle or any other 5 V bus. The interface is **not 5 V tolerant** and can damage the Raspberry Pi and the computer.
 
-![Pi1541-III (Painted)](https://raw.githubusercontent.com/tebl/C64-Pi1541-III/main/gallery/2023-06-04%2002.00.37.jpg)
+![PI1551-III view](media/10.view-1.jpg)
+![PI1551-III view](media/11.view-2.jpg)
+![PI1551-III view](media/12.view-3.jpg)
 
-- [1> Modules](#1-modules)
-- [2> Documentation](#2-documentation)
-  - [2.1> Resources](#21-resources)
-- [3> Acknowledgements](#3-acknowledgements)
+---
+
+**Build files:** Gerbers for every board, plus BOM and SMD position files for the main module (Pi1551-III Module-rotated), are published in the **[Releases](https://github.com/ytmytm/Pi1551-III/releases)** section of this repository.
+
+If you prefer a smaller, simpler board: see **[Pi1551-HAT](https://github.com/ytmytm/Pi1551-HAT)** for a minimal Raspberry Pi HAT with the same 1551 + TAP functionality with several features optional.
+
+---
+
+- [1. Modules](#1-modules)
+- [2. Differences from Pi1541-III](#2-differences-from-pi1541-iii)
+- [3. Assembly](#3-assembly)
+- [4. Cables](#4-cables)
+- [5. Documentation](#5-documentation)
+- [6. Resources](#6-resources)
+- [7. Acknowledgements](#7-acknowledgements)
+
+## 1. Modules
+
+A complete Pi1551-III uses the same five-PCB stack as the Pi1541-III. Assembly and mechanical steps are almost identical, so **use the original project’s gallery and docs** for visual guidance:
+
+- **[C64-Pi1541-III gallery](https://github.com/tebl/C64-Pi1541-III/tree/main/gallery)** — build photos, side views, and assembly reference.
+
+![Pi1541-III side view (assembly is the same)](https://raw.githubusercontent.com/tebl/C64-Pi1541-III/main/gallery/2023-03-21%2004.16.07.jpg)
+(side view of Pi1541-III, almost identical to Pi1551-III)
+
+| Module | Required | Description | Documentation | Build files |
+|--------|----------|-------------|---------------|------------|
+| [Pi1551-III Module-rotated](Pi1551-III%20Module-rotated) | Yes | Main module: RPi 3, TCBM interface, optional power area (see below), MiniDIN-7 for TAP. | [BOM](Pi1551-III%20Module-rotated/README.md#3-bom) | [Releases](https://github.com/ytmytm/Pi1551-III/releases) |
+| [Pi1551-III Module Panel](Pi1551-III%20Module%20Panel) | Yes | Front panel: OLED, rotary encoder, switches. | [BOM](Pi1551-III%20Module%20Panel/README.md#3-bom) | [Releases](https://github.com/ytmytm/Pi1551-III/releases) |
+| [Pi1551-III Faceplate (FB1)](faceplates/Pi1551-III%20Module%20FB1) | Yes | Top faceplate; mechanical support for front panel. | — | [Releases](https://github.com/ytmytm/Pi1551-III/releases) |
+| [Pi1551-III Faceplate (FB2)](faceplates/Pi1551-III%20Module%20FB2) | Recommended | Bottom faceplate; protects from shorts. | — | [Releases](https://github.com/ytmytm/Pi1551-III/releases) |
+| [Pi1551-III Faceplate (FP1)](faceplates/Pi1551-III%20Module%20FP1) | Recommended | Front faceplate; cosmetic. | — | [Releases](https://github.com/ytmytm/Pi1551-III/releases) |
+
+Each module’s BOM is in its README. For the main module, Gerbers, BOM and position files for SMD parts only are also in **Releases** for easy fabrication (e.g. JLCPCB).
+
+## 2. Differences from Pi1541-III
+
+- **Main module (“rotated”)**  
+  The Raspberry Pi footprint is **rotated 180°** so **USB and HDMI are accessible** on the outside. I recommend **not** fitting the barrel jack (J1) or the 470 µF capacitor (C6): power the device from the **Raspberry Pi’s USB Micro** port with a good 5 V supply (e.g. 2 A). That avoids the extra power circuitry and is safe and sufficient.
+
+- **1551 / TCBM**  
+  The main module is adapted for **1551 emulation** and connects to the computer via a **TCBM bus connector** to a **[tcbm2sd](https://github.com/ytmytm/plus4-tcbm2sd)** adapter. Don't try to connect it to the original 1551 paddle - it will damage RaspberryPi.
+
+- **TAP playback**  
+  A **MiniDIN-7** port on the main module connects to the C16/C116/Plus/4 **tape port** with a MiniDIN-7 cable for TAP playback.
+
+- **Branding**  
+  Labels use the **Microgramma D Extended Bold** font for a consistent Commodore look.
+
+## 3. Assembly
+
+I had some trouble building the first unit, so here are some hints to make it easier:
+
+1. Start with the [Pi1551-III Module-rotated](Pi1551-III%20Module-rotated):
+  - Smallest elements first: SMD (if you solder them by hand), then buzzer, then RPi GPIO connector and TCBM bus connector for the ribbon cable, finally the MiniDIN-7 socket.
+  - Since the USB power port is now accessible on the RPi, I recommend not installing the barrel jack or the 470 µF capacitor.
+  - The capacitor can make the RPi’s HDMI port hard to use, depending on the plug.
+
+2. Then continue with the [Pi1551-III Module Panel](Pi1551-III%20Module%20Panel):
+  - Screw the bottom standoffs for mounting the faceplate **first** — it won’t be possible to turn them once the Module Panel is soldered to the base module.
+  - ![PI1551-III view](media/24.frontpaneltestfit.jpg) (bottom left standoff is missing on the photo)
+  - Put solder blobs on JP3/JP4 to set up the OLED’s VCC and GND pin order according to your SH1106 module version.
+  - ![PI1551-III view](media/25.oled-power.jpg)
+  - Do a test fit with the buttons (not soldered yet) and the faceplate to confirm their stems are long enough.
+  - Solder in the buttons and rotary encoder, then test-fit the faceplate again.
+  - Solder in the OLED screen; this is tricky because it must be at just the right distance from the PCB, parallel to it and aligned with the hole in the faceplate. I did the soldering with the faceplate screwed on; a piece of sticky foam behind the OLED to hold it in place can help.
+  - ![PI1551-III view](media/25.oled-testfit.jpg)
+  - Solder in the rectangular LEDs — as with the OLED, align them with the holes in the faceplate so they sit flush. Their longer legs should be in the holes closer to the outer edge of the board; if you’re unsure about polarity, leave this until the two modules are connected with angled pin headers — with power on you can check which orientation lights the PWR LED.
+  - ![PI1551-III view](media/26.leds.jpg)
+  - An authentic 1551 has a green PWR LED and red DRV LED, but their brightness differs a lot; rather than tweaking current-limiting resistors, I recommend using the same colour LED for both indicators.
+
+3. Connect the modules together:
+  - Fit the 12-pin right-angle pin headers so the short leg connects to the vertical PCB (Module Panel) and the longer legs go down through the horizontal PCB (Module-rotated).
+  - Check that the PCBs are at the correct angle.
+  - Ensure the standoffs in the Module Panel’s bottom holes are screwed in.
+  - Then solder the first 1–2 pins on each end.
+  - Check the angle again before soldering the rest.
+
+At this point the device is basically complete and ready for testing. The remaining steps (faceplates, etc.) are better described and illustrated in the **[C64-Pi1541-III gallery](https://github.com/tebl/C64-Pi1541-III/tree/main/gallery)** and in the original [assembling one](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/assembling_one.md) and [setting it up](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/setting_it_up.md) guides; substitute Pi1551-III module and Pi1551 firmware where the docs refer to Pi1541/1541.
+
+## 4. Cables
+
+**TCBM (tcbm2sd):** Use a straight 16-wire ribbon cable; connections are 1:1 and both ends must be crimped the same way. On the Pi1551-III side the cable must be plugged in before the top cover is screwed on. I recommend crimping as in the photo below so the cable runs to the side opposite the plug’s tab, for easier routing.
+
+![TCBM cable](media/27.cable.jpg)
+
+**Tape (TAP):** You need a 1:1 male-to-male MiniDIN-7 cable. They are available on AliExpress, or you can solder one yourself. When buying a cable, note:
+- Both plugs should be straight, not angled.
+- The plug may not fit the Plus/4 if the round part of the MiniDIN doesn’t extend far enough from the rectangular body of the plug.
+
+If your C16/C116/Plus/4 has a 6510 CPU swap, it cannot drive the tape MOTOR line; you can leave MOTOR enabled all the time in the [Pi1551](https://github.com/ytmytm/Pi1551) config (see [this note](https://hackjunk.com/2017/06/23/commodore-16-plus-4-8501-to-6510-cpu-conversion/)).
+
+## 5. Documentation
+
+SD card setup, configuration options, and firmware behaviour are described in the **[Pi1551](https://github.com/ytmytm/Pi1551)** project on GitHub.
+
+- [Troubleshooting](documentation/troubleshooting.md)
+
+## 6. Resources
+
+- [C64 Pi1541-III](https://github.com/tebl/C64-Pi1541-III) — original design and gallery
+- [Pi1551](https://github.com/ytmytm/Pi1551) — 1551 emulator firmware for Raspberry Pi
+- [tcbm2sd](https://github.com/ytmytm/plus4-tcbm2sd) — TCBM adapter (connects Pi1551 to C16/C116/Plus/4)
+- [Pi1551-HAT](https://github.com/ytmytm/Pi1551-HAT) — compact HAT alternative for 1551 + TAP
+- [fat32format](http://ridgecrop.co.uk/index.htm?guiformat.htm) — format SD card as FAT32 (e.g. for Raspberry Pi boot)
+- [SD Memory Card Formatter](https://www.sdcard.org/downloads/formatter/) — SD Association tool for formatting SD/SDHC/SDXC cards (Windows/Mac/Linux)
 
 
-## 1> Modules
-A complete Pi1541 requires no less than five PCBs in order to be built as pictured, for a somewhat simpler build you may skip the bottom faceplate though that also serves a purpose and it wouldn't entirely be complete without it. See below for a side view of how the device is put together, there is a top and bottom faceplate as well as another faceplate on the front. The PCB at the center will in the documentation be referred to as the *Pi1541-III Module* while the smaller one towards the front will be referred to as the *panel*.
+## 7. Acknowledgements
 
-![Pi1541-III side view](https://raw.githubusercontent.com/tebl/C64-Pi1541-III/main/gallery/2023-03-21%2004.16.07.jpg)
+The Pi1551-III mechanical design, panel, and faceplates are derived from **[tebl](https://github.com/tebl)**’s [C64-Pi1541-III](https://github.com/tebl/C64-Pi1541-III), which in turn builds on **Steve White**’s [Pi1541](https://cbm-pi1541.firebaseapp.com/) software.
 
-In order to keep things in an order that's mostly organized, I've had to separate out information such as the *BOM* that goes into the build for the modules they belong to - hopefully making things easier if I ever start doing alternate versions with other components. See further below for [documentation](#2-documentation) on how to assemble one, set it up as well as anything else that you might need to know.
-
-| Module                 | Required    | Description                        | Documentation                      | Order      |
-| ---------------------- | ----------- | ---------------------------------- | ---------------------------------- | ---------- |
-| [C64 Pi1541-III Module](https://github.com/tebl/C64-Pi1541-III/tree/main/C64%20Pi1541-III%20Module) | Yes | Main module |  [BOM](https://github.com/tebl/C64-Pi1541-III/tree/main/C64%20Pi1541-III%20Module/README.md#3-bom) | [PCBWay](https://www.pcbway.com/project/shareproject/C64_Pi1541_III_Module_629bebca.html)
-| [C64 Pi1541-III Module Panel](https://github.com/tebl/C64-Pi1541-III/tree/main/C64%20Pi1541-III%20Module%20Panel) | Yes | Adds a vertical surface for mounting switches and rotary encoder. |  [BOM](https://github.com/tebl/C64-Pi1541-III/tree/main/C64%20Pi1541-III%20Module%20Panel/README.md#3-bom) | [PCBWay](https://www.pcbway.com/project/shareproject/C64_Pi1541_III_Panel_39049bfb.html)
-| [C64 Pi1541-III Faceplate (FB1)](https://github.com/tebl/C64-Pi1541-III/tree/main/faceplates/C64%20Pi1541-III%20Module%20FB1) | Yes | Top faceplate, provides mechanical support for front panel. | | [PCBWay](https://www.pcbway.com/project/shareproject/C64_Pi1541_III_Faceplate_FB1_d125443d.html)
-| [C64 Pi1541-III Faceplate (FB2)](https://github.com/tebl/C64-Pi1541-III/tree/main/faceplates/C64%20Pi1541-III%20Module%20FB2) | Recommended | Bottom faceplate, adds a layer of security so that you don't accidentally short out the device on something placed under it. | | [PCBWay](https://www.pcbway.com/project/shareproject/C64_Pi1541_III_Faceplate_FB2_912f9cbb.html)
-| [C64 Pi1541-III Faceplate (FP1)](https://github.com/tebl/C64-Pi1541-III/tree/main/faceplates/C64%20Pi1541-III%20Module%20FP1) | Recommended | Front faceplate, this is mainly here to make things look nice. | | [PCBWay](https://www.pcbway.com/project/shareproject/C64_Pi1541_III_Faceplate_FP1_228805ce.html)
-
-# 2> Documentation
-There are many things that need to be said in order to successfully put a working Pi1541 together, and while the information may seem pedantic and at that times simplified for veterans at building electronical devices - I'm just an amateur and so I try to include everything that would have been needed when I first started building things such as this.
-
-If you've just come across this page and have been wondering exactly what components you need to order in order to build the Pi1541, then I suggest that you start on the [modules](#1-modules)-section - each of modules listed are PCBs that you will most likely want. In the same list there is a link to the BOM belonging to that specific module, you need to order the components for each of them.
-
-This repository does not include Gerber-files, you either need to generate those from the KiCAD source files found in this repository - the easiest way to order them via [PCBWay](https://www.pcbway.com/project/shareproject/?tag=Pi1541-III). Note that for the faceplates specifically, you may want to pay a little bit extra to avoid having the order number printed on it - or specifically tell them to put it on the back.
-
-For everything else, I can only hope that one of the following documents will provide you with the answers that you need:
-- [Assembling one](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/assembling_one.md)
-- [Setting it up](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/setting_it_up.md)
-- [Troubleshooting](https://github.com/tebl/C64-Pi1541-III/blob/main/documentation/troubleshooting.md)
-
-## 2.1> Resources
-- [Pi1541 Homepage](https://cbm-pi1541.firebaseapp.com/)
-- [fat32format](http://ridgecrop.co.uk/index.htm?guiformat.htm)
-- [Shared PCBWay projects for Pi1541-III](https://www.pcbway.com/project/shareproject/?tag=Pi1541-III)
-
-# 3> Acknowledgements
-Everything comes from something, in particular when it comes to most of my electronics projects. I mainly build things I would like to own, often doing a respin to fit my own particular style and preferences with most of the hardest parts of the designs already provided by people more knowledgable than I.
-
-The Pi1541-III would not exist if it were not for the work of Steve White, creator of the [Pi1541](https://cbm-pi1541.firebaseapp.com/)-software that makes this jumble of PCBs come alive!

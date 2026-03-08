@@ -101,7 +101,7 @@ At this point the device is basically complete and ready for testing. Remaining 
 
 **Tape (TAP):** You need a 1:1 male-to-male MiniDIN-7 cable. They are available on AliExpress, or you can solder one yourself. When buying a cable, note:
 - Both plugs should be straight, not angled.
-- The plug may not fit the Plus/4 if the round part of the MiniDIN doesn’t extend far enough from the rectangular body of the plug.
+- The plug may not fit the Plus/4 if the round part of the MiniDIN doesn’t extend far enough from the rectangular body of the plug. Just shave off the corners from the square section. It may not look pretty but it will work. 
 
 If your C16/C116/Plus/4 has a 6510 CPU swap, it cannot drive the tape MOTOR line; you can leave MOTOR enabled all the time in the [Pi1551](https://github.com/ytmytm/Pi1551) config (see [this note](https://hackjunk.com/2017/06/23/commodore-16-plus-4-8501-to-6510-cpu-conversion/)).
 

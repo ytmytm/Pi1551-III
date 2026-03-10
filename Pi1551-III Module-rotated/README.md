@@ -33,7 +33,7 @@ This BOM matches the schematic in this folder. Optional parts in parentheses. Ge
 | Q1–Q4           | MMBT3904 or 2N3904 (SOT-23 SMD) — TAP circuit                        |     4 |
 | R1              | 3.3 kΩ (0805 or similar SMD) — with D2                               |     1 |
 | R2, R3 *1       | 470 Ω (0805 SMD) — for panel LEDs                                    |     2 |
-| R4–R11          | 3.3 kΩ (0805 SMD) — TAP / level shifting                             |     8 |
+| R4–R24          | 3.3 kΩ (0805 SMD) — TAP / level shifting, pullups                    |    21 |
 | Mounting *2           | Nylon M3 hex standoffs 6mm (M-F)                                  |     4 |
 | Mounting *2           | Nylon M3 hex standoffs 8mm (M-F)                                  |     2 |
 | Mounting *3           | Nylon M3 hex standoffs 12mm (M-F)                                 |    (4)|

@@ -78,6 +78,7 @@ I had some trouble building the first unit, so here are some hints to make it ea
   - ![PI1551-III view](media/25.oled-power.jpg)
   - Do a test fit with the buttons (not soldered yet) and the faceplate to confirm their stems are long enough.
   - Solder in the buttons and rotary encoder, then test-fit the faceplate again.
+  - Solder the right-angle pin headers to the faceplate. Make sure the two boards are aligned and square. This must happen before OLED screen.
   - Solder in the OLED screen; this is tricky because it must be at just the right distance from the PCB, parallel to it and aligned with the hole in the faceplate. I did the soldering with the faceplate screwed on; a piece of sticky foam behind the OLED to hold it in place can help.
   - ![PI1551-III view](media/25.oled-testfit.jpg)
   - Solder in the rectangular LEDs — as with the OLED, align them with the holes in the faceplate so they sit flush. Their longer legs should be in the holes closer to the outer edge of the board; if you’re unsure about polarity, leave this until the two modules are connected with angled pin headers — with power on you can check which orientation lights the PWR LED.
